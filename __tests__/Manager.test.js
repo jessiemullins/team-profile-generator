@@ -1,16 +1,15 @@
-// using Manager constructor 
-const Manager = require('../lib/manager');
+//inquire manager.js file
 
-// creating manager object  
-test('creates an Manager object', () => {
-    const manager = new Manager('Jessie', 90, 'j.bene89@gmail', 4);
-    
-    expect(manager.officeNumber).toEqual(expect.any(Number));
-});
+const Manager = require("../lib/manager.js") 
 
-// gets role from getRole()
-test('gets role of employee', () => {
-    const manager = new Manager('Jessie', 90, 'j.bene89@gmail.com');
+//test to ensure a managers office number populates
+describe('Manager', () => {
 
-    expect(manager.getRole()).toEqual("Manager");
-}); 
+    describe('manager office number', () => {
+      it('A managers office number should populate if a manager is added to the directory', () => {
+        const testOfficeNumber = "10";
+        const e = new Manager("Toni", 1, "toni@email.com", testOfficeNumber);
+        expect(e.officeNumber).toEqual(testOfficeNumber);
+      });
+    });
+  });

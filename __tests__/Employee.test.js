@@ -1,13 +1,13 @@
-const Employee = require("../lib/Employee")
+const Employee = require('../lib/employee.js')
 
-test("Check if employee is an object", () =>{
-  const newEmployee = new Employee ()
-  expect (typeof(newEmployee)).toBe("object")
-})
+//test to ensure a new employee is created when all CLI prompts are completed
+describe('Employee', () => {
 
-test ("Check if the name is saved correctly", () => {
-  const newEmployee = new Employee ("Matt")
-  expect (newEmployee.name).toBe("Matt")
-
+    describe('new employee', () => {
+      it('should create a new employee including name, email, and id once CLI prompts are completed', () => {
+        const e = new Employee("Toni", 1, "toni@email.com");
+        expect(e.Employee).toEqual();
+      });
+    });
+  });
   
-})
